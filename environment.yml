@@ -1,31 +1,32 @@
-- name: Update pip
-        run: |
-          python -m pip install --upgrade pip
-          pythin -m pip install numpy
+name: Your Workflow Name
 
-- name: install numpy
-        run: |
-          pythin -m pip install numpy
+on:
+  push:
+    branches:
+      - main  # Replace with your desired branch
 
-name: myenv  # Replace with your desired environment name
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - python=3.9  # Specify the Python version you need
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  # Add your required packages and their versions here
-  - numpy
-  - pandas
-  - nltk
-  - wordcloud
-  - scikit-learn
-  - newspaper3k
-  - matplotlib
-  - plotly
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-  # Additional packages if needed
-  - requests
-  - docx
-  - pytz
-  - streamlit
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Update pip
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install numpy
+
+    - name: Install packages
+      run: |
+        python -m pip install pandas nltk wordcloud scikit-learn newspaper3k matplotlib plotly requests docx pytz streamlit
+
+    - name: Display installed packages
+      run: |
+        python -c "import pkg_resources; print([d for d in pkg_resources.working_set])"
