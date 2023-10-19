@@ -1,6 +1,11 @@
 - name: Update pip
         run: |
           python -m pip install --upgrade pip
+          pythin -m pip install numpy
+
+- name: install numpy
+        run: |
+          pythin -m pip install numpy
 
 name: myenv  # Replace with your desired environment name
 channels:
