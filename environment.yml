@@ -1,11 +1,33 @@
-name: my_streamlit_app  # Name of the environment
+name: myenv  # Replace with your desired environment name
 channels:
   - defaults
 dependencies:
-  - python=3.9        # Specify the Python version you want to use
-  - pip
-  - streamlit          # Streamlit
-  - plotly             # Plotly for interactive charts (as per your app's requirements)
-  - nltk               # NLTK for natural language processing (if needed)
-  - scikit-learn       # scikit-learn for machine learning (if needed)
-  - any_other_package  # Add any other required packages here
+  - python=3.9  # Specify the Python version you need
+
+  # Add your required packages and their versions here
+  - numpy
+  - pandas
+  - nltk
+  - wordcloud
+  - scikit-learn
+  - newspaper3k
+  - matplotlib
+  - plotly
+
+  # Additional packages if needed
+  - requests
+  - docx
+  - pytz
+  - streamlit
+
+  # Include any other dependencies your project uses
+  # - another_package=1.2
+
+  # If using conda-forge channel
+  - conda-forge::package_name
+
+  # If using other channels
+  - channel_name::package_name=1.2
+
+# Specify any other configuration options if needed
+
