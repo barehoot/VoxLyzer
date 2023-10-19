@@ -27,8 +27,4 @@ dependencies:
   # If using conda-forge channel
   - conda-forge::package_name
 
-  # If using other channels
-  - channel_name::package_name=1.2
-
-# Specify any other configuration options if needed
 
