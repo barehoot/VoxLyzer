@@ -1,0 +1,61 @@
+**Text Sentiment Analysis App - Instructions**
+
+Welcome to the Text Sentiment Analysis App! This app allows you to perform sentiment analysis on text, transcribe audio, and more. Follow the instructions below to use the app effectively.
+
+**Using the Text Analysis Feature:**
+
+1. **Enter a News Article URL:**
+   - In the sidebar, locate the "Enter the News Article Link" input field.
+   - Enter the URL of a news article you want to analyze.
+   - Click the "Submit" button.
+
+2. **Upload a File (Optional):**
+   - If you have a text document to analyze (DOCX, TXT, or PDF), you can upload it.
+   - Click the "Upload file" button and select your document.
+   - The app will automatically analyze the uploaded file.
+
+3. **Transcribe Audio (Optional):**
+   - If you have an audio file to transcribe, use the "Upload an audio file" section.
+   - Supported audio formats include MP3, WAV, and FLAC.
+   - Click the "Transcribe" button to transcribe the audio.
+
+4. **Clear All Inputs:**
+   - At any point, you can reset all inputs by clicking the "Clear All" button in the sidebar.
+
+5. **View Sentiment Analysis:**
+   - Once you've provided a URL or uploaded a document, the app will perform sentiment analysis.
+   - The sentiment analysis results will be displayed in the "Sentiment Indicator" tab.
+   - You'll see scores for positive, negative, neutral, and overall sentiment.
+
+**Using the Word Cloud Feature:**
+
+1. Go to the "Word Cloud" tab to see a visual representation of the most frequent words in the text.
+2. The word cloud helps you quickly identify important keywords.
+
+**Using the Content Viewer Feature:**
+
+1. Visit the "Content" tab to view the entire content of the article or document.
+2. You can edit and scroll through the text to explore the content.
+
+**Using the Information Retrieval Feature:**
+
+1. Head to the "Information Retrieval and Relevance Ranking" tab.
+2. Enter a query in the "Enter your query" input field.
+3. Click the "Search in the text" button.
+4. The app will retrieve the most relevant sentences based on your query.
+
+**Part-of-Speech (POS) Tagging:**
+
+1. To perform POS tagging on the content, click the "Perform POS Tagging" button.
+2. POS tags for each word in the text will be displayed.
+
+**Additional Information:**
+
+- This app supports various document formats, including DOCX, TXT, and PDF.
+- Audio transcription supports formats like MP3, WAV, and FLAC.
+- Ensure that you have an active internet connection for web-based operations.
+- For assistance, click the "Clear All" button and re-enter your inputs.
+
+That's it! You're all set to use the Text Sentiment Analysis App. If you encounter any issues, please refer to the "README" for more information or contact our support team.
+
+Happy text analysis!
