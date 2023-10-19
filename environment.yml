@@ -1,0 +1,11 @@
+name: my_streamlit_app  # Name of the environment
+channels:
+  - defaults
+dependencies:
+  - python=3.9        # Specify the Python version you want to use
+  - pip
+  - streamlit          # Streamlit
+  - plotly             # Plotly for interactive charts (as per your app's requirements)
+  - nltk               # NLTK for natural language processing (if needed)
+  - scikit-learn       # scikit-learn for machine learning (if needed)
+  - any_other_package  # Add any other required packages here
