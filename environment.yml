@@ -1,3 +1,7 @@
+- name: Update pip
+        run: |
+          python -m pip install --upgrade pip
+
 name: myenv  # Replace with your desired environment name
 channels:
   - conda-forge
