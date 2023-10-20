@@ -13,8 +13,6 @@ from PyPDF2 import PdfFileReader
 import fitz
 import warnings
 from PyPDF2 import PdfReader
-import speech_recognition as sr
-from pydub import AudioSegment
 from nltk.corpus import stopwords
 from nltk import pos_tag
 from nltk.tokenize import word_tokenize
@@ -191,24 +189,6 @@ def retrieve_relevant_information(text_data, query, cosine_similarities):
     return top_sentences
 
 
-def transcribe_audio(uploaded_audio):
-    if uploaded_audio:
-        recognizer = sr.Recognizer()
-
-        with st.spinner("Transcribing..."):
-            # Convert any audio format to WAV using pydub
-            audio = AudioSegment.from_file(uploaded_audio)
-            wav_filename = "audio.wav"
-            audio.export(wav_filename, format="wav")
-
-            # Transcribe the WAV file
-            audio_data = sr.AudioFile(wav_filename)
-            with audio_data as source:
-                audio_text = recognizer.record(source)
-
-            text = recognizer.recognize_google(audio_text)
-            st.success("Transcription Complete:")
-            sent(text)
 
 def remove_stopwords(text):
     stop_words = set(stopwords.words('english'))
@@ -427,18 +407,12 @@ if st.sidebar.button("Submit"):
     else:
         st.warning("Enter the URL: it cannot be empty")
 upl= st.sidebar.file_uploader("Upload file", type=(["docx","txt","pdf"]))
-uploaded_audio = st.sidebar.file_uploader("Upload an audio file", type=["mp3", "wav", "flac"])
 
 
 
 #if upl is not None:
     #text_content = upl.read()
-  #  sent(read_docx(upl))
-
-if st.sidebar.button("Transcribe"):
-    transcribe_audio(uploaded_audio)
-    if transcribe_audio:
-        st.audio(uploaded_audio, format="audio/wav")  
+  #  sent(read_docx(upl)) 
 
 if st.sidebar.button("Clear All"):
     # Clear values from *all* all in-memory and on-disk data caches:
