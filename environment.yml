@@ -2,23 +2,26 @@ name: VOx
 channels:
   - defaults
 dependencies:
-  - python=3.9  # Specify the Python version you need
-
-  # Add your required packages and their versions here
+  - python=3.9
   - numpy
   - pandas
   - nltk
   - wordcloud
   - scikit-learn
-  - newspaper3k
   - matplotlib
   - plotly
-
-  # Additional packages if needed
   - requests
-  - docx  # Replace "docx" with "python-docx"
   - pytz
   - streamlit
-
-
-
+  - pypi::newspaper3k
+  - pypi::python-docx
+  - pypi::nltk
+  - pypi::nltk-data  # Add this line to specify additional data
+  - pypi::PyPDF2
+  - pypi::textract
+  - pypi::Pillow  # The package for PIL (Pillow is the modern version of PIL)
+  - pypi::PyMuPDF  # Add PyMuPDF for handling PDFs (fitz)
+  - pypi::SpeechRecognition
+  - pypi::pydub
+  - pypi::scipy  # Add SciPy, which is used by scikit-learn
+  - pypi::scikit-learn
