@@ -1,33 +1,25 @@
 name: VOx
-
-on:
-  push:
-    branches:
-      - main  # Replace with your desired branch
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-
-    - name: Update pip
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install numpy
-        python -m pip install plotly
-
-    - name: Install packages
-      run: |
-        python -m pip install pandas nltk wordcloud scikit-learn newspaper3k matplotlib plotly requests docx pytz streamlit
-
-    - name: Display installed packages
-      run: |
-        python -c "import pkg_resources; print([d for d in pkg_resources.working_set])"
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - nltk
+  - wordcloud
+  - scikit-learn
+  - matplotlib
+  - plotly
+  - requests
+  - pytz
+  - streamlit
+  - newspaper3k
+  - python-docx
+  - nltk
+  - pypdf2
+  - textract
+  - pillow
+  - fitz
+  - pydub
+  - scipy
