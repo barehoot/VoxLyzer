@@ -15,8 +15,8 @@ pyttsx3==2.90
 pyPDF2==1.26.0
 python-docx==0.8.11
 speechrecognition==3.8.1
-pydub==0.25.1
-fitz==0.0.3
+pydub
+fitz
 plotly==5.1.0
 wordcloud==1.8.1
 
