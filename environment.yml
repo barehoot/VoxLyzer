@@ -1,5 +1,6 @@
 name: VOx
 channels:
+  - conda-forge
   - defaults
 dependencies:
   - python=3.9
@@ -13,15 +14,12 @@ dependencies:
   - requests
   - pytz
   - streamlit
-  - pypi::newspaper3k
-  - pypi::python-docx
-  - pypi::nltk
-  - pypi::nltk-data  # Add this line to specify additional data
-  - pypi::PyPDF2
-  - pypi::textract
-  - pypi::Pillow  # The package for PIL (Pillow is the modern version of PIL)
-  - pypi::PyMuPDF  # Add PyMuPDF for handling PDFs (fitz)
-  - pypi::SpeechRecognition
-  - pypi::pydub
-  - pypi::scipy  # Add SciPy, which is used by scikit-learn
-  - pypi::scikit-learn
+  - newspaper3k
+  - python-docx
+  - nltk
+  - pypdf2
+  - textract
+  - pillow
+  - fitz
+  - pydub
+  - scipy
