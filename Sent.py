@@ -8,11 +8,8 @@ import re
 import nltk
 import pandas as pd
 import docx
-import PyPDF2
 import textract
 from PyPDF2 import PdfFileReader
-from io import BytesIO
-from PIL import Image
 import fitz
 import warnings
 from PyPDF2 import PdfReader
