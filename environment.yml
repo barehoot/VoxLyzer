@@ -17,9 +17,11 @@ dependencies:
   - newspaper3k
   - python-docx
   - nltk
-  - pypdf2
+  - PyPDF2
   - textract
   - pillow
   - fitz
   - pydub
   - scipy
+  - speech_recognition
+  
