@@ -23,7 +23,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pandas nltk wordcloud scikit-learn newspaper3k matplotlib plotly requests docx pytz streamlit
-        python -m pip install newspaper3k docx pPyPDF2 textract pillow fitz pydub scipy
+        python -m pip install newspaper3k docx PyPDF2 textract pillow fitz pydub scipy
       working-directory: ./
 
     - name: Display installed packages
