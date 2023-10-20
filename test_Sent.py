@@ -1,5 +1,5 @@
 import pytest
-from Sent import text_sent
+from text_sentiment import text_sent
 
 @pytest.fixture
 def positive_content():
