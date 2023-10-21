@@ -4,6 +4,6 @@ channels:
   - defaults
 dependencies:
   - python=3.11   # Specify your desired Python version
-  - pip
-  - pip:
+  - pip3
+  - pip3:
     - -r requirements.txt
