@@ -25,10 +25,4 @@ jobs:
         python -m pip install newspaper3k docx PyPDF2 textract fitz pydub scipy
       working-directory: ./
 
-    - name: Display installed packages
-      run: |
-        python -c "import pkg_resources; print([d for d in pkg_resources.working_set])"
-
     
-
-
