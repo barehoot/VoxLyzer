@@ -1,6 +1,6 @@
 name: VOx
 channels:
-  - python-ci
+  - conda
 dependencies:
   - python=3.9
   - numpy
