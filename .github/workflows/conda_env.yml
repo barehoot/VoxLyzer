@@ -19,7 +19,7 @@ jobs:
         python-version: 3.9
     
     - name: Create Conda Environment
-      run: conda env create
+      run: conda env create -f environment.yml
       working-directory: ${{ github.workspace }}
 
     - name: Install Missing Packages with pip
