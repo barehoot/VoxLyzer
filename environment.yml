@@ -3,6 +3,7 @@ channels:
   - conda
 dependencies:
   - python=3.9
+  - pip
   - numpy
   - nltk
   - wordcloud
@@ -11,12 +12,12 @@ dependencies:
   - pytz
   - streamlit
   - newspaper3k
+  - pydub
   - docx
-  - PyPDF2
   - textract
-  - pillow
-  - fitz
+  - Pillow
+  - SpeechRecognition
+  - pyMuPDF
   - pydub
   - scipy
-  - speech_recognition
   
