@@ -3,7 +3,7 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python=3.11   # Specify your desired Python versio
-   - pip:
-    -  -r requirements.txt 
-    
+  - python=3.11
+  - pip:
+    - -r requirements.txt
+
