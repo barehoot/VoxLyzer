@@ -14,7 +14,7 @@ dependencies:
   - streamlit
   - newspaper3k
   - pydub
-  - docx
+  - python-docx
   - textract
   - Pillow
   - SpeechRecognition
