@@ -1,23 +1,9 @@
-name: VOx
+name: Vox
 channels:
   - conda-forge
-  - default
+  - defaults
 dependencies:
-  - python=3.9
+  - python=3.11   # Specify your desired Python version
   - pip
-  - numpy
-  - nltk
-  - wordcloud
-  - scikit-learn
-  - plotly
-  - pytz
-  - streamlit
-  - newspaper3k
-  - pydub
-  - python-docx
-  - textract
-  - Pillow
-  - SpeechRecognition
-  - pydub
-  - scipy
-  
+  - pip:
+    - -r requirements.txt
