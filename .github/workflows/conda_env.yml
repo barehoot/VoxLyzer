@@ -29,7 +29,6 @@ jobs:
         pip install pydub
         pip install python-docx  # The correct package name for "docx"
         pip install textract
-        pip install PyMuPDF  # The correct package name for "fitz"
 
       shell: bash
 
