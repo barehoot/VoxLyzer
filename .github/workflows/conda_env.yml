@@ -17,7 +17,17 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
-
+    
+    - name: Install Missing Packages with pip
+      run: |
+        pip install newspaper3k
+        pip install speech_recognition
+        pip install pydub
+        pip install docx
+        pip install textract
+        pip install fitz
+      shell: bash
+    
     - name: Create Conda Environment
       run: conda env create -f environment.yml
       working-directory: ${{ github.workspace }}
