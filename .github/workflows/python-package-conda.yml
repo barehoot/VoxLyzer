@@ -20,7 +20,9 @@ jobs:
         echo $CONDA/bin >> $GITHUB_PATH
 
     - name: Create Conda environment
-      run: conda env create -n Vox
+      run: conda update conda
+           conda update pip
+           conda env create -n Vox
 
     - name: Install dependencies
       run: |
