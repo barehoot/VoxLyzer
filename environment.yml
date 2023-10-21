@@ -5,5 +5,5 @@ channels:
 dependencies:
   - python=3.11   # Specify your desired Python versio
    - pip:
-    - -r requirements.txt 
+    -  -r requirements.txt 
     
