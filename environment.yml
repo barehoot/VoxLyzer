@@ -1,6 +1,6 @@
 name: VOx
 channels:
-  - defaults
+  - python-ci
 dependencies:
   - python=3.9
   - numpy
@@ -11,7 +11,7 @@ dependencies:
   - pytz
   - streamlit
   - newspaper3k
-  - python-docx
+  - docx
   - PyPDF2
   - textract
   - pillow
