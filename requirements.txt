@@ -8,13 +8,14 @@ scikit-learn==0.24.2
 matplotlib==3.4.2
 seaborn==0.11.1
 streamlit==1.5.0
-newspaper3k==0.2.8
+newspaper3k
 nltk==3.6.3
 python-docx==0.8.11
 pyttsx3==2.90
 pyPDF2==1.26.0
-python-docx==0.8.11
-speechrecognition==3.8.1
+docx
+textract
+speechrecognition
 pydub
 fitz
 plotly==5.1.0
