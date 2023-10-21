@@ -1,6 +1,6 @@
 name: VOx
 channels:
-  - conda
+  - conda-forge
 dependencies:
   - python=3.9
   - pip
