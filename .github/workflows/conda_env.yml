@@ -31,6 +31,8 @@ jobs:
         conda install --name VOx --file environment.yml
         # Additional setup or installation steps
 
-    - name: Run Tests
+    - name: Install Missing Packages with pip
       run: |
-        # Run your Python tests or other project-specific commands
+        pip install textract newspaper3k speech_recognition pydub fitz docx
+      shell: bash
+
