@@ -8,9 +8,7 @@ dependencies:
   - nltk
   - wordcloud
   - scikit-learn
-  - matplotlib
   - plotly
-  - requests
   - pytz
   - streamlit
   - newspaper3k
