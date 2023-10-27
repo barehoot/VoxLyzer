@@ -5,11 +5,6 @@ channels:
   - conda-forge
   
 dependencies:
-  - pip
-  - python
   - streamlit
   - plotly
-  - newspaper3k
-  - nltk
-  - wordcloud
   - pandas
