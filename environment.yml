@@ -2,6 +2,7 @@ name: Vox
 
 channels:
   - defaults
+  - conda-forge
   
 dependencies:
   - pip
@@ -12,14 +13,3 @@ dependencies:
   - nltk
   - wordcloud
   - pandas
-  - python-docx
-  - PyPDF2
-  - textract
-  - Pillow
-  - docx2txt
-  - matplotlib
-  - scipy
-  - pydub
-  - pyaudio
-  - scikit-learn
-  - SpeechRecognition
