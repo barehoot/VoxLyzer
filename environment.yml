@@ -1,7 +1,5 @@
 name: Vox
-channels:
-  - conda-forge
-  - defaults
+
 dependencies:
   - pip
   - python
