@@ -29,6 +29,10 @@ jobs:
 
     - name: Install dependencies
       run: |
+        while read -r line; do
+          conda install $line
+        done < requirements.txt
+
         conda install -c anaconda portaudio
         conda install -c anaconda pyaudio
         # You can also install any other dependencies you have in your environment.yml file.
