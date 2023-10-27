@@ -26,6 +26,15 @@ jobs:
         exec bash
       shell: bash
 
+    - name: Env create
+      run: |
+        conda env create -f environment.yml
+      shell: bash
+
+    - name: Activate Conda environment
+      run: |
+        conda activate Vox
+      shell: bash
 
     - name: Install dependencies
       run: |
