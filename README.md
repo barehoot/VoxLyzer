@@ -37,12 +37,13 @@ To run this Streamlit app, follow these steps:
    pip install -r requirements.txt
    ```
 4. get the ffmpeg for audio processing:
-5. 
-   '''bash
+
+    ```bash
    sudo apt-get update
    sudo apt-get install ffmpeg
-   '''
-5. Run the Streamlit app:
+   ```
+   
+6. Run the Streamlit app:
 
    ```bash
    streamlit run app.py
