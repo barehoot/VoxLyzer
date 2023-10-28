@@ -199,22 +199,25 @@ def retrieve_relevant_information(text_data, query, cosine_similarities):
 
 def transcribe_audio(uploaded_audio):
     if uploaded_audio:
+        # Convert any audio format to WAV using pydub
+        audio = AudioSegment.from_file(uploaded_audio)
+
+        # Transcribe the WAV file
         recognizer = sr.Recognizer()
+        audio_data = sr.AudioData(
+            audio.raw_data, audio.frame_rate, audio.sample_width
+        )
 
         with st.spinner("Transcribing..."):
-            # Convert any audio format to WAV using pydub
-            audio = AudioSegment.from_file(uploaded_audio)
-            wav_filename = "audio.wav"
-            audio.export(wav_filename, format="wav")
+            try:
+                text = recognizer.recognize_google(audio_data)
+                st.success("Transcription Complete:")
+                sent(text)
+            except sr.UnknownValueError:
+                st.warning("Google Web Speech API could not understand the audio")
+            except sr.RequestError:
+                st.warning("Could not request results from Google Web Speech API")
 
-            # Transcribe the WAV file
-            audio_data = sr.AudioFile(wav_filename)
-            with audio_data as source:
-                audio_text = recognizer.record(source)
-
-            text = recognizer.recognize_google(audio_text)
-            st.success("Transcription Complete:")
-            sent(text)
 
 def remove_stopwords(text):
     stop_words = set(stopwords.words('english'))
