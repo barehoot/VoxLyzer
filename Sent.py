@@ -24,10 +24,10 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-nltk.download("words")
-nltk.download("punkt")
-nltk.download("stopword")
+nltk.download('words')
+nltk.download('punkt')
 nltk.download('vader_lexicon')
+nltk.download('stopwords')
 
 
 warnings.filterwarnings('ignore')
