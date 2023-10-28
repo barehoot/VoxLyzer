@@ -433,6 +433,7 @@ if st.sidebar.button("Submit"):
     else:
         st.warning("Enter the URL: it cannot be empty")
 upl= st.sidebar.file_uploader("Upload file", type=(["docx","txt","pdf"]))
+st.write("Currently Audio Function is not working properly, woorking on it get it resolved. Soon!! Thanks for your support.")
 uploaded_audio = st.sidebar.file_uploader("Upload an audio file", type=["mp3", "wav", "flac"])
 
 
@@ -443,7 +444,7 @@ uploaded_audio = st.sidebar.file_uploader("Upload an audio file", type=["mp3", "
 
 if st.sidebar.button("Transcribe"):
     transcribe_audio(uploaded_audio)
-    st.write("Currently Audio Function is not working properly, woorking on it get it resolved. Soon!! Thanks for your support.")
+    
     if transcribe_audio:
         st.audio(uploaded_audio, format="audio/wav")  
 
