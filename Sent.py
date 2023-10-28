@@ -23,6 +23,7 @@ from nltk import pos_tag
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+import simpleaudio as sa
 
 nltk.download('words')
 nltk.download('punkt')
@@ -202,10 +203,14 @@ def transcribe_audio(uploaded_audio):
         # Convert any audio format to WAV using pydub
         audio = AudioSegment.from_file(uploaded_audio)
 
+        # Play the audio
+        wave_obj = sa.WaveObject(audio.raw_data, audio.frame_width, audio.frame_count())
+        play_obj = wave_obj.play()
+
         # Transcribe the WAV file
         recognizer = sr.Recognizer()
         audio_data = sr.AudioData(
-            audio.raw_data, audio.frame_rate, audio.sample_width
+            audio.raw_data, audio.frame_rate, audio.frame_width
         )
 
         with st.spinner("Transcribing..."):
@@ -217,6 +222,9 @@ def transcribe_audio(uploaded_audio):
                 st.warning("Google Web Speech API could not understand the audio")
             except sr.RequestError:
                 st.warning("Could not request results from Google Web Speech API")
+
+        play_obj.wait_done()  # Wait for audio playback to finish
+
 
 
 def remove_stopwords(text):
