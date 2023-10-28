@@ -26,7 +26,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 nltk.download("words")
 nltk.download("punkt")
-nltk.download("stopworld")
+nltk.download("stopword")
 nltk.download('vader_lexicon')
 
 
