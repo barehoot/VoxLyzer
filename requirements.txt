@@ -12,7 +12,7 @@ PyMuPDF==1.18.12
 docx2txt==0.7
 matplotlib==3.4.3
 scipy==1.7.3
-pydub==0.26.0
+pydub
 pyaudio==0.2.11
 scikit-learn==0.24.2
 SpeechRecognition
