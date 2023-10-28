@@ -146,7 +146,7 @@ st.markdown(css_styles, unsafe_allow_html=True)
 
 st.markdown(header_animation_css, unsafe_allow_html=True)  # Apply the animation CSS
 st.markdown('<h1 class="title">Text Sentiment Analysis Data Tool</h1>', unsafe_allow_html=True)
-st.markdown('<center><h5 style="color: grey;">This Tool transcribe Speach to Text, scrape the Article from the url and Analyse the uploaded DOCX, PDF and TXT File</h5></center>', unsafe_allow_html=True)
+st.markdown('<center><h5 style="color: grey;">This Tool scrape the Article from the url and Analyse the uploaded DOCX, PDF and TXT File</h5></center>', unsafe_allow_html=True)
 st.markdown('<center><h5 style="color: grey;" >Note : Please got to the the Sidebar/Navbar to enter the link or upload the file- to initialize the Tool</h5></center>', unsafe_allow_html=True)
 
 st.markdown('<style>div.block-container{padding-top:1rem;}</style>',unsafe_allow_html=True)
@@ -443,6 +443,7 @@ uploaded_audio = st.sidebar.file_uploader("Upload an audio file", type=["mp3", "
 
 if st.sidebar.button("Transcribe"):
     transcribe_audio(uploaded_audio)
+    st.write("Currently Audio Function is not working properly, woorking on it get it resolved. Soon!! Thanks for your support.")
     if transcribe_audio:
         st.audio(uploaded_audio, format="audio/wav")  
 
